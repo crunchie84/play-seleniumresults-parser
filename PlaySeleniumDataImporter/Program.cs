@@ -53,8 +53,10 @@ namespace PlaySeleniumDataImporter
               testsFound++;
               Console.Out.WriteLine(string.Format("##teamcity[testStarted name='{0}']", tr.Title));
               if(!tr.Passed){
-                string error = string.Format("{0}{1}Check Selenium testsuite '{2}' in artifacts folder to see details & stacktrace", tr.ErrorMessage, Environment.NewLine, seleniumTestSuiteFile.Name);//assumption that you configured TeamCity to place /test-result/* in artifacts folder of your build
-                Console.Out.WriteLine(string.Format("##teamcity[testFailed name='{0}' message='{1}' details='{2}']", tr.Title, "Selenium test failed", error));
+                string error = TeamCityServiceMessageParser.Escape(
+                    string.Format("{0}{1}Check Selenium testsuite '{2}' in artifacts folder to see details & stacktrace", tr.ErrorMessage, Environment.NewLine, seleniumTestSuiteFile.Name)
+                  );//assumption that you configured TeamCity to place /test-result/* in artifacts folder of your build                
+                Console.Out.WriteLine(string.Format("##teamcity[testFailed name='{0}' message='{1}' details='{2}']", TeamCityServiceMessageParser.Escape(tr.Title), "Selenium test failed", error));
               }                
               Console.Out.WriteLine(string.Format("##teamcity[testFinished name='{0}']", tr.Title));
             }

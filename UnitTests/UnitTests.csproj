@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestDataExtractorTests.cs" />
+    <Compile Include="TeamCityServiceMessageParserTests.cs" />
+    <Compile Include="TestParserTests.cs" />
     <Compile Include="FileCleanupTests.cs" />
     <Compile Include="FileSelectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +77,9 @@
     <Content Include="test-result-with-seleniumtests\Application.test.html.failed.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="test-result-with-seleniumtests\Application.test.html.failed.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="test-result-with-seleniumtests\TEST-UrlTest.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -90,6 +94,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PlaySeleniumDataImporter\PlaySeleniumDataImporter.csproj">
+      <Project>{D6E7A49E-AD80-4B82-98ED-7A41F0FB94E8}</Project>
+      <Name>PlaySeleniumDataImporter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SeleniumResultsParser\SeleniumResultsParser.csproj">
       <Project>{99BC4313-19EF-4EB6-B375-81E8B80D32BB}</Project>
       <Name>SeleniumResultsParser</Name>

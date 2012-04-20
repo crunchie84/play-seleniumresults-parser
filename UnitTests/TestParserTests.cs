@@ -11,7 +11,7 @@ using System.Xml.Linq;
 namespace UnitTests
 {
   [TestFixture]
-  public class TestDataExtractorTests
+  public class TestParserTests
   {
     [Test]
     public void GivenXmlFile_ShouldParseTo_TestResults()
