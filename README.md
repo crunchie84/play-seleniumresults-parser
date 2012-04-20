@@ -44,5 +44,5 @@ Console application which interacts with the library and outputs [TeamCity Servi
 
 License information
 ===========================
-Source originally appeared at github.com Git repository: https://github.com/crunchie84/play-seleniumresults-parser/downloads
-This software is licensed under GNU GPL-3.0 - see supplied LICENSE.TXT for details
+This tool & parser were created by [Mark van Straten - Q42.nl](http://www.q42.nl/mark-van-straten and is hosted at [https://github.com/crunchie84/play-seleniumresults-parser/downloads](https://github.com/crunchie84/play-seleniumresults-parser/downloads)
+This software is kindly granted to the community and licensed under GNU GPL-3.0 - see supplied LICENSE.TXT for details
