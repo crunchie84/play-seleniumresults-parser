@@ -1,12 +1,32 @@
 Selenium Results Parser (Play 1.2.4)
 ===========================
-This repository contains a parser for the Selenium HTML resultfiles which are generated via the Play Framework (Java, 1.2.4). The need was created because the HTML files are not readable as build metadata for TeamCity.
+This repository contains:
+  - Library to parse the Selenium HTML resultfiles to metadata c# Objects;
+  - A console app which uses this metadata to inform TeamCity of Selenium Tests + Results (passed/failed).
 
-Useage of the (compiled) TeamCity DataImporter tool is easy; run it as build step in TeamCity with the working directory pointing to your Play Framework root directory and it will output TeamCity Service messages to the console which TeamCity will interpret.
+The Selenium HTML results are generated via the Play Framework (Java, 1.2.4) when running the command:
+```
+play.bat auto-test
+```
+
+The need was created because these HTML files are not readable as build metadata for TeamCity.
+
+Requirements
+===========================
+Tested and granted the official Works On My Machine Seal of Approval:
+  - Visual Studio 2010 to compile
+  - .Net4 to run
+
+Usage
+===========================
+Usage of the (compiled) TeamCity DataImporter tool is easy; run it as build step in TeamCity with the working directory pointing to your Play Framework root directory and it will output TeamCity Service messages to the console which TeamCity will interpret.
 
 ```
 C:\TeamCityAgent\WorkDir\1ecfe9489fb51e4869af\MyPlayProject C:\TeamCityTools\SeleniumImporter\PlaySeleniumDataImporter.exe
 ```
+
+Contents
+===========================
 
 Included in this repository are the following c# projects:
 
