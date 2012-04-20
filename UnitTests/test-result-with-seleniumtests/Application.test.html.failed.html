@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Test results for Application.test.html</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style type="text/css">
+            body {
+                font-family: Arial, Sans;
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                width: 100%;
+                border: none;
+            }
+            #header {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            #results {
+                padding: 15px;
+            }
+            #header h1 {
+                margin-top: 0;
+            }
+            #header.passed {
+				background: #81CF5A !important;
+			}
+            .passed span {
+                background: #81CF5A !important;
+                padding: 3px 5px;
+            }
+			#header.failed {
+				background: #EF6868 !important;
+			}
+            .failed span {
+                background: #EF6868 !important;
+                padding: 3px 5px;
+            }
+            table .source {
+                margin-top: 10px;
+            }
+            table .source span {
+                color: #fff;
+                font-size: 85%;
+                padding: 1px 3px;
+                background: #666;
+            }
+            table .sourceLine {
+                border-left: 3px solid #c00;
+                padding: 4px 3px;
+                color: #000;
+                font-size: 85%;
+                margin-bottom: 10px;
+            }
+            .error {
+				color: #c00;
+			}
+            table td, table th {
+				padding: 5px;
+                border: none;
+			}
+            .status_passed {
+                background: #9BCF81 !important;
+            }
+            .status_failed {
+                background: #EF8686 !important;
+            }
+            .status_done {
+                background: #EFEFD1 !important;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="header" class="block failed">
+            <h1>
+                Application.test.html
+            </h1>
+            <p>
+                FAILED
+            </p>
+        </div>
+
+        <div id="results">
+            <DIV>// worksn't # { siena.sienafixture delete:'all' /} 
+
+
+<TABLE cellpadding=1 cellspacing=1 border=0 width=100% style="margin-bottom: 20px"><THEAD><TR class="title status_failed"><TH colspan=3 style="background: #111; color: #fff; padding: 5px">Homepage loads</TH></TR></THEAD><TBODY><TR><TD colspan=3 style="font-style:italic; background: #e2e2e2">	// Open the home page, and check that no error occured</TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>open</TD><TD width=33%>/</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_passed"><TD width=33%>assertNotTitle</TD><TD width=33%>Application error</TD><TD></TD></TR></TBODY></TABLE><TABLE cellpadding=1 cellspacing=1 border=0 width=100% style="margin-bottom: 20px"><THEAD><TR><TH colspan=3 style="background: #111; color: #fff; padding: 5px">Invalid login</TH></TR></THEAD><TBODY><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clearSession</TD><TD width=33%></TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>open</TD><TD width=33%>/</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clickAndWait</TD><TD width=33%>link=login</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>type</TD><TD width=33%>email</TD><TD>user@mydomain.com</TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>type</TD><TD width=33%>password</TD><TD>someUnknownPassword</TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clickAndWait</TD><TD width=33%>css=input[type='submit']</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_passed"><TD width=33%>assertTextPresent</TD><TD width=33%>Authentication error</TD><TD></TD></TR></TBODY></TABLE><TABLE cellpadding=1 cellspacing=1 border=0 width=100% style="margin-bottom: 20px"><THEAD><TR><TH colspan=3 style="background: #111; color: #fff; padding: 5px">Register</TH></TR></THEAD><TBODY><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clearSession</TD><TD width=33%></TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>open</TD><TD width=33%>/</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clickAndWait</TD><TD width=33%>link=login</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_done"><TD width=33%>clickAndWait</TD><TD width=33%>link=register &gt;</TD><TD></TD></TR><TR style="cursor: pointer;" class="  status_failed"><TD width=33%>type</TD><TD width=33%>name</TD><TD>Element name not found</TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>type</TD><TD width=33%>email</TD><TD>user@mydomain.com</TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>type</TD><TD width=33%>password</TD><TD>existingUserPasswordStr</TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>type</TD><TD width=33%>passwordverification</TD><TD>existingUserPasswordStr</TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>clickAndWait</TD><TD width=33%>css=input[type='submit']</TD><TD></TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>assertTextPresent</TD><TD width=33%>want to link</TD><TD></TD></TR><TR><TD colspan=3 style="font-style:italic; background: #e2e2e2">	// registered and loggedin! now for step 2...</TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>clickAndWait</TD><TD width=33%>link=skip</TD><TD></TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>assertTextPresent</TD><TD width=33%>Click to link your phone</TD><TD></TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>clickAndWait</TD><TD width=33%>link=Click to link your phone</TD><TD></TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>clickAndWait</TD><TD width=33%>link=phone1</TD><TD></TD></TR><TR style="cursor: pointer;" class=""><TD width=33%>assertTextPresent</TD><TD width=33%>You are linked</TD><TD></TD></TR></TBODY></TABLE></DIV>
+        </div>
+
+    </body>
+</html>
+

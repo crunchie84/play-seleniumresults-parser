@@ -1,0 +1,15 @@
+#ignore default visual studio stuff
+obj
+bin
+*.suo
+*.user
+
+#ncrunch
+*.ncrunchproject
+*.ncrunch
+*.ncrunchsolution
+*.cache
+
+#ignore subdirs in packages folder because nuget restore is in place
+packages/**
+!packages/repositories.config
