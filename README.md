@@ -42,7 +42,7 @@ PlaySeleniumDataImporter
 -------------
 Console application which interacts with the library and outputs [TeamCity Service Messages](http://confluence.jetbrains.net/display/TCD7/Build+Script+Interaction+with+TeamCity)
 
-
 License information
 ===========================
-This software is licensed under GNU GPL-3.0
+Source originally appeared at github.com Git repository: https://github.com/crunchie84/play-seleniumresults-parser/downloads
+This software is licensed under GNU GPL-3.0 - see supplied LICENSE.TXT for details
