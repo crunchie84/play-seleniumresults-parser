@@ -94,10 +94,14 @@ namespace SeleniumResultsParser
        * class .status_failed = failed test
        */
       var stepWhichFailedEl = (from el in testCaseTableElement.Descendants("tbody").Descendants("tr") where el.Attribute("class") != null && el.Attribute("class").Value == "status_failed" select el).FirstOrDefault();
+      var title = (from el in testCaseTableElement.Descendants("thead").Descendants("tr").Descendants("th") select el.Value).FirstOrDefault();
+
+      if (string.IsNullOrEmpty(title))
+        return null;//no testresult
 
       return new TestResult
       {
-        Title = (from el in testCaseTableElement.Descendants("thead").Descendants("tr").Descendants("th") select el.Value).First(),//title of this testcase => thead/tr/td/text()
+        Title = title,//title of this testcase => thead/tr/td/text()
         Passed = stepWhichFailedEl == null,
         ErrorMessage = stepWhichFailedEl == null ? string.Empty : string.Join(" -> ", from el in stepWhichFailedEl.Descendants() select el.Value)
       };
